@@ -19,6 +19,14 @@
 	   
 ### 使用：
 	   
-#### 1.在合理的地方进行初始化
+#### 1.在合理的地方进行初始化,尽可能早的进行初始化,比如application的onCreate中.
 	NetworkBus.getDefault().init(this);
-
+	
+#### 2.在需要监听的对象上注册.
+	NetworkBus.getDefault().register(this);
+	
+#### 3.通过 NetworkSubscribe 注解添加即时网络监听.
+	@NetworkSubscribe(netFilterType = NetFilterType.ALL)
+    	public void netWorkChangeCallBack(NetType netType) {
+        
+    	}
