@@ -5,21 +5,20 @@
 ### 添加依赖：
 
 #### 1.Add the JitPack repository to your build file
-      ```java allprojects {
+	allprojects {
          repositories {
 			   ...
 			   maven { url 'https://jitpack.io' }
 		   }
 	   }
-	```
       
 #### 2. Add the dependency
-	   dependencies {
+	dependencies {
 	          implementation 'com.github.More-Stronger:NetworkBus:1.0.0'
 	   }
 	   
 ### 使用：
 	   
 #### 1.在合理的地方进行初始化
-
+	NetworkBus.getDefault().init(this);
 
