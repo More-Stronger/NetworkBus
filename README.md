@@ -35,7 +35,7 @@
 	NetworkBus.getDefault().register(this);
 
 #### 3.在需要监听的对象中,合理的地方进行注销,比如 Activity 的 onPause中.
-	NetworkBus.getDefault().register(this);
+	NetworkBus.getDefault().unregister(this);
 
 #### 4.通过 NetworkSubscribe 注解添加即时网络监听.
     @NetworkSubscribe(netFilterType = NetFilterType.ALL)
