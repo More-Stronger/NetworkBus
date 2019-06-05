@@ -73,3 +73,7 @@
    1.需要在合理的地方进行释放资源,避免内存泄漏.如果是在 Application 中进行 init ,可以不调用该方法.
 
 	NetworkBus.getDefault().release();
+
+   2.取消所有对象监听网络.
+
+    NetworkBus.getDefault().unregisterAll();
