@@ -80,7 +80,7 @@
     
 ## 混淆
     
-    因为监听框架内部使用到反射,所以需要再混淆文件中添加如下忽略内容:
+   因为监听框架内部使用到反射,所以需要再混淆文件中添加如下忽略内容:
     
     -keepclasseswithmembers class * {
         @com.morestronger.networklib.annotation.NetworkSubscribe <methods>;
