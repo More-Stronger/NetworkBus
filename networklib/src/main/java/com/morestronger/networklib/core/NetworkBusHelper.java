@@ -1,6 +1,7 @@
 package com.morestronger.networklib.core;
 
 import android.util.ArrayMap;
+import android.util.Log;
 
 import com.morestronger.networklib.annotation.NetworkSubscribe;
 import com.morestronger.networklib.bean.NetSubscribeMethodBean;
@@ -78,6 +79,7 @@ public class NetworkBusHelper {
             if (!methodParameterType.isAssignableFrom(NetType.class)) {
                 continue;
             }
+            Log.i("NetworkBus", object.getClass().getName() + "===" + method.getName());
             methodList.add(new NetSubscribeMethodBean(networkAnnotation.netFilterType(), methodParameterType, method));
         }
         return methodList;
