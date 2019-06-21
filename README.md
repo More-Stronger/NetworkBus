@@ -22,8 +22,8 @@
 
 #### 2. Add the dependency
 
-	dependencies {
-	     implementation 'com.github.More-Stronger:NetworkBus:1.0.0'
+	dependencies {	  
+	     implementation 'com.github.More-Stronger:NetworkBus:v1.0.1'
 	}
 
 ## 使用
